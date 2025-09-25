@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     environment {
-        COMPOSE_FILE = "docker-compose.studentservice.yml"
+        COMPOSE_FILE = "docker-compose.gateway.yml"
         REGISTRY_CONTAINER_NAME = "serviceregistry"
-        TARGET_SERVICE = "studentservice"
-        TARGET_CONTAINER_NAME = "studentservice"
-        TARGET_IMAGE_NAME = "studentservice:latest"
+        TARGET_SERVICE = "gateway"
+        TARGET_CONTAINER_NAME = "gateway"
+        TARGET_IMAGE_NAME = "gateway:latest"
     }
 
     stages {
