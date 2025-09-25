@@ -1,12 +1,12 @@
 services:
-  studentservice:
+  gateway:
     build:
       context: .
       dockerfile: Dockerfile
-    image: studentservice:latest
-    container_name: studentservice
+    image: gateway:latest
+    container_name: gateway
     ports:
-      - "8084:8084"
+      - "8083:8083"
     networks:
       - updated_orgadmin_rmscadminnetwork
     environment:
@@ -22,10 +22,10 @@ services:
       MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: health,info,eureka,shutdown
 
       # ✅ External MySQL DB Configuration (update host if needed)
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/schoolerp?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      # SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/schoolerp?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      # SPRING_DATASOURCE_USERNAME: root
+      # SPRING_DATASOURCE_PASSWORD: root
+      # SPRING_JPA_HIBERNATE_DDL_AUTO: update
 
     restart: on-failure
 
