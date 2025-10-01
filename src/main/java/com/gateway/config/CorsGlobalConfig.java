@@ -14,7 +14,7 @@ public class CorsGlobalConfig {
     public CorsWebFilter corsWebFilter() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.setAllowedOrigins(Arrays.asList("http://localhost:3000")); // React app
+        config.setAllowedOrigins(Arrays.asList("http://localhost")); // React app
         config.setAllowedHeaders(Arrays.asList("*"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 
@@ -23,4 +23,5 @@ public class CorsGlobalConfig {
 
         return new CorsWebFilter(source);
     }
+
 }
