@@ -14,7 +14,7 @@ public class GatewayCorsConfig {
     @Bean
     public CorsWebFilter corsWebFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Arrays.asList("http://localhost:92", "http://100.96.183.108:92","https://schoolerp.helixioninnovations.in"));
+        config.setAllowedOrigins(Arrays.asList("https://schoolerp.helixioninnovations.in"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(Arrays.asList("*"));
         config.setAllowCredentials(true);
